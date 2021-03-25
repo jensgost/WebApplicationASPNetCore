@@ -25,10 +25,10 @@ namespace WebApplicationASPNetCore.Controllers
             return View(await _context.Event.ToListAsync());
         }
 
-        // GET: Events/ShowMyEvents
-        public async Task<IActionResult> ShowMyEvents()
+        // POST: Events/MyEvents
+        public async Task<IActionResult> MyEvents(String SearchEvent)
         {
-            return View();
+            return View("Index", await _context.Event.Where( j => j.Title.Contains(SearchEvent)).ToListAsync());
         }
 
         // GET: Events/Join
