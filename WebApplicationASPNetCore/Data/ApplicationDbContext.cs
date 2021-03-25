@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using WebApplicationASPNetCore.Models;
 
 namespace WebApplicationASPNetCore.Data
 {
@@ -12,5 +13,6 @@ namespace WebApplicationASPNetCore.Data
             : base(options)
         {
         }
+        public DbSet<WebApplicationASPNetCore.Models.Event> Event { get; set; }
     }
 }
