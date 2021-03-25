@@ -25,6 +25,30 @@ namespace WebApplicationASPNetCore.Controllers
             return View(await _context.Event.ToListAsync());
         }
 
+        // GET: Events/ShowMyEvents
+        public async Task<IActionResult> ShowMyEvents()
+        {
+            return View();
+        }
+
+        // GET: Events/Join
+        public async Task<IActionResult> Join(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var @event = await _context.Event
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (@event == null)
+            {
+                return NotFound();
+            }
+
+            return View(@event);
+        }
+
         // GET: Events/Details/5
         public async Task<IActionResult> Details(int? id)
         {
