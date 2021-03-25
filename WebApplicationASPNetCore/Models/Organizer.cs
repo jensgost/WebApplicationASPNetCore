@@ -7,10 +7,11 @@ namespace WebApplicationASPNetCore.Models
 {
     public class Organizer
     {
-        public int Id { get; set; }
+        public int Id { get; set; } // PK
         public string Name { get; set; }
         public string Email { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
+        public virtual List<Event> Events { get; set; }
 
         public Organizer()
         {
