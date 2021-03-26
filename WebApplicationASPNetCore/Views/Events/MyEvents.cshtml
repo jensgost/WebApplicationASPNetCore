@@ -1,19 +1,48 @@
-﻿<h4>My Events</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="ShowMyEvents">
-            <div class="form-group">
-                <label for="SearchEvent" class="control-label"></label>
-                <input name="SearchEvent" class="form-control" />
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Search" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+﻿@model WebApplicationASPNetCore.Models.Event
 
 <div>
+    <h4>Details about this event</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Place)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Place)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SpotsAvailable)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SpotsAvailable)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="MyEvents" asp-route-id="@Model.Id">Join</a> |
     <a asp-action="Index">Back to List</a>
 </div>

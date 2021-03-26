@@ -180,3 +180,13 @@ C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplica
 C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplicationASPNetCore\obj\Debug\net5.0\Razor\Views\Events\Index.cshtml.g.cs
 C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplicationASPNetCore\obj\Debug\net5.0\Razor\Views\Events\Join.cshtml.g.cs
 C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplicationASPNetCore\obj\Debug\net5.0\Razor\Views\Events\MyEvents.cshtml.g.cs
+C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplicationASPNetCore\obj\Debug\net5.0\Razor\Views\Attendees\Create.cshtml.g.cs
+C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplicationASPNetCore\obj\Debug\net5.0\Razor\Views\Attendees\Delete.cshtml.g.cs
+C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplicationASPNetCore\obj\Debug\net5.0\Razor\Views\Attendees\Details.cshtml.g.cs
+C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplicationASPNetCore\obj\Debug\net5.0\Razor\Views\Attendees\Edit.cshtml.g.cs
+C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplicationASPNetCore\obj\Debug\net5.0\Razor\Views\Attendees\Index.cshtml.g.cs
+C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplicationASPNetCore\obj\Debug\net5.0\Razor\Views\Organizers\Create.cshtml.g.cs
+C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplicationASPNetCore\obj\Debug\net5.0\Razor\Views\Organizers\Delete.cshtml.g.cs
+C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplicationASPNetCore\obj\Debug\net5.0\Razor\Views\Organizers\Details.cshtml.g.cs
+C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplicationASPNetCore\obj\Debug\net5.0\Razor\Views\Organizers\Edit.cshtml.g.cs
+C:\Users\Jens\Documents\Programmering\GitHub\WebApplicationASPNetCore\WebApplicationASPNetCore\obj\Debug\net5.0\Razor\Views\Organizers\Index.cshtml.g.cs
