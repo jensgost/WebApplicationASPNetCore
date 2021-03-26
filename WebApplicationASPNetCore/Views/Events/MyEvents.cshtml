@@ -1,8 +1,5 @@
-﻿@model WebApplicationASPNetCore.Models.AttendeeEvent
+﻿@model WebApplicationASPNetCore.Controllers.AttendeesController
 
-@{
-    ViewData["Title"] = "MyeEvents";
-}
 
 <h1>My Events</h1>
 
@@ -10,38 +7,32 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Title)
+                @Html.DisplayNameFor(model => model.AttendeeEvents[0].Event.Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Organizer)
+                @Html.DisplayNameFor(model => model.AttendeeEvents[0].Event.Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Description)
+                @Html.DisplayNameFor(model => model.AttendeeEvents[0].Event.Place)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Place)
+                @Html.DisplayNameFor(model => model.AttendeeEvents[0].Event.Address)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Address)
+                @Html.DisplayNameFor(model => model.AttendeeEvents[0].Event.Date)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Spots_available)
+                @Html.DisplayNameFor(model => model.AttendeeEvents[0].Event.SpotsAvailable)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.AttendeeEvent)
+        @foreach (var item in Model.AttendeeEvents)
         {
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Event.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Event.Organizer.Name)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Event.Description)
@@ -56,7 +47,7 @@
                     @Html.DisplayFor(modelItem => item.Event.Date)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Event.Spots_available)
+                    @Html.DisplayFor(modelItem => item.Event.SpotsAvailable)
                 </td>
             </tr>
         }
