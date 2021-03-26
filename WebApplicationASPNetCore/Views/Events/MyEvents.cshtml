@@ -1,48 +1,64 @@
-﻿@model WebApplicationASPNetCore.Models.Event
+﻿@model WebApplicationASPNetCore.Models.AttendeeEvent
 
-<div>
-    <h4>Details about this event</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Place)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Place)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Date)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.SpotsAvailable)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.SpotsAvailable)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="MyEvents" asp-route-id="@Model.Id">Join</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+@{
+    ViewData["Title"] = "MyeEvents";
+}
+
+<h1>My Events</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Organizer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Place)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttendeeEvent[0].Event.Spots_available)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.AttendeeEvent)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.Organizer.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.Place)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.Spots_available)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

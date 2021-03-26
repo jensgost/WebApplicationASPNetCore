@@ -15,7 +15,7 @@ namespace WebApplicationASPNetCore.Models
         public string Address { get; set; }
         public int Date { get; set; }
         public int SpotsAvailable { get; set; }
-        public virtual List<Attendee> Attendees { get; set; }
+        public ICollection<AttendeeEvent> AttendeeEvents { get; set; }
 
         public Event()
         {

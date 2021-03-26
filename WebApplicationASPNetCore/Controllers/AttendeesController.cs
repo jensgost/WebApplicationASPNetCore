@@ -19,6 +19,12 @@ namespace WebApplicationASPNetCore.Controllers
             _context = context;
         }
 
+        public IList<AttendeeEvent> AttendeeEvents { get; set; }
+        public async Task OnGetAsync()
+        {
+            AttendeeEvents = await _context.AttendeeEvent.Include(j => j.Event).ThenInclude(o => o.OrganzierId).Where(a => a.Attendee.Id == 1).ToListAsync();
+        }
+
         // GET: Attendees
         public async Task<IActionResult> Index()
         {

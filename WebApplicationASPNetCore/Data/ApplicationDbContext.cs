@@ -16,5 +16,6 @@ namespace WebApplicationASPNetCore.Data
         public DbSet<WebApplicationASPNetCore.Models.Event> Event { get; set; }
         public DbSet<WebApplicationASPNetCore.Models.Attendee> Attendee { get; set; }
         public DbSet<WebApplicationASPNetCore.Models.Organizer> Organizer { get; set; }
+        public DbSet<WebApplicationASPNetCore.Models.AttendeeEvent> AttendeeEvent { get; set; }
     }
 }

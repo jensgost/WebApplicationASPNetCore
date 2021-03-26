@@ -26,9 +26,9 @@ namespace WebApplicationASPNetCore.Controllers
         }
 
         // POST: Events/MyEvents
-        public async Task<IActionResult> MyEvents(String SearchEvent)
+        public string MyEvents(String SearchEvent)
         {
-            return View("Index", await _context.Event.Where( j => j.Title.Contains(SearchEvent)).ToListAsync());
+            return "You entered" + SearchEvent;
         }
 
         // GET: Events/Join
